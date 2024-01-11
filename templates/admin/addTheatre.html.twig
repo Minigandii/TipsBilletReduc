@@ -1,0 +1,33 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Ajouter Theatre{% endblock %}
+
+{% block body %}
+    {{parent()}}
+
+<div class="example-wrapper">
+    <p class="fs-3 mt-3 text-white">Ajouter un théâtre :</p>
+
+         {{ form_start(addTheatreform) }}
+        <div class="form-floating mb-2">
+            {{ form_widget(addTheatreform.email, {'attr': {'class': 'form-control','placeholder': 'Email'}}) }}
+            {{ form_label(addTheatreform.email) }}
+        </div>
+
+        <div class="form-floating mb-2">
+            {{ form_widget(addTheatreform.password, {'attr': {'class': 'form-control','placeholder': 'Mot de passe'}}) }}
+            {{ form_label(addTheatreform.password) }}
+
+        </div>
+
+        <div class="form-floating mb-2">
+            {{ form_widget(addTheatreform.BRId, {'attr': {'class': 'form-control','placeholder': 'Prénom'}}) }}
+            {{ form_label(addTheatreform.BRId) }}
+
+        </div>
+
+        <button type="submit" class="btn btn-dark">Valider</button>
+    {{ form_end(addTheatreform) }}
+
+</div>
+{% endblock %}

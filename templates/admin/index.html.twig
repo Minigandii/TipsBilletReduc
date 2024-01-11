@@ -1,0 +1,17 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Hello AdminController!{% endblock %}
+
+{% block body %}
+
+{{parent()}}
+
+<div class="example-wrapper">
+
+    <div class="container">
+        {{ include('admin/viewtheatres.html.twig', {theatres_list: theatres}) }}
+    </div>
+
+
+</div>
+{% endblock %}

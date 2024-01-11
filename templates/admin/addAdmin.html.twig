@@ -1,0 +1,39 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Ajouter Admin{% endblock %}
+
+{% block body %}
+    {{parent()}}
+
+
+<div class="example-wrapper">
+    <p class="fs-3 mt-3 text-white">Ajouter un administrateur :</p>
+
+     {{ form_start(addAdminform) }}
+        <div class="form-floating mb-2">
+            {{ form_widget(addAdminform.nom, {'attr': {'class': 'form-control','placeholder': 'Prénom'}}) }}
+            {{ form_label(addAdminform.nom) }}
+        </div>
+
+        <div class="form-floating mb-2">
+            {{ form_widget(addAdminform.prenom, {'attr': {'class': 'form-control','placeholder': 'Prénom'}}) }}
+            {{ form_label(addAdminform.prenom) }}
+
+        </div>
+
+        <div class="form-floating mb-2">
+            {{ form_widget(addAdminform.email, {'attr': {'class': 'form-control','placeholder': 'Prénom'}}) }}
+            {{ form_label(addAdminform.email) }}
+
+        </div>
+
+        <div class="form-floating mb-2">
+            {{ form_widget(addAdminform.password, {'attr': {'class': 'form-control','placeholder': 'Prénom'}}) }}
+            {{ form_label(addAdminform.password) }}
+        </div>
+
+        <button type="submit" class="btn btn-dark">Valider</button>
+    {{ form_end(addAdminform) }}
+
+</div>
+{% endblock %}

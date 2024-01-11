@@ -1,0 +1,45 @@
+{% extends 'baseAddOuvreur.html.twig' %}
+
+{% block title %}Ajouter Ouvreur{% endblock %}
+
+{% block body %}
+
+{{parent()}}
+
+<div class="example-wrapper">
+    <p class="fs-3 mt-3 text-white">Ajouter un ouvreur :</p>
+
+   
+             {{ form_start(addOuvreurform) }}
+        <div class="form-floating mb-2">
+            {{ form_widget(addOuvreurform.email, {'attr': {'class': 'form-control','placeholder': 'Email'}}) }}
+            {{ form_label(addOuvreurform.email) }}
+        </div>
+
+        <div class="form-floating mb-2">
+            {{ form_widget(addOuvreurform.password, {'attr': {'class': 'form-control','placeholder': 'Mot de passe'}}) }}
+            {{ form_label(addOuvreurform.password) }}
+
+        </div>
+
+        <div class="form-floating mb-2">
+            {{ form_widget(addOuvreurform.nom, {'attr': {'class': 'form-control','placeholder': 'Nom'}}) }}
+            {{ form_label(addOuvreurform.nom) }}
+
+        </div>
+
+        <div class="form-floating mb-2">
+            {{ form_widget(addOuvreurform.prenom, {'attr': {'class': 'form-control','placeholder': 'Prénom'}}) }}
+            {{ form_label(addOuvreurform.prenom) }}
+        </div>
+
+        <div class="form-floating mb-2">
+            {{ form_widget(addOuvreurform.telephone, {'attr': {'class': 'form-control','placeholder': 'Telephone'}}) }}
+            {{ form_label(addOuvreurform.telephone) }}
+        </div>
+
+        <button type="submit" class="btn btn-dark">Valider</button>
+    {{ form_end(addOuvreurform) }}
+
+</div>
+{% endblock %}

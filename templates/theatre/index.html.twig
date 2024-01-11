@@ -1,0 +1,18 @@
+{% extends 'baseTheatre.html.twig' %}
+
+{% block title %}Theatre{% endblock %}
+
+{% block body %}
+
+{{parent()}}
+
+
+<div class="example-wrapper">
+
+    <div class="container">
+        {{ include('theatre/viewouvreurs.html.twig', {ouvreurs_list: ouvreurs}) }}
+    </div>
+
+   
+</div>
+{% endblock %}

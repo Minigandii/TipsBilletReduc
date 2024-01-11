@@ -1,0 +1,42 @@
+{% extends 'baseViewOuvreurTheatre.html.twig' %}
+
+{% block title %}Détails de {{ ouvreur.nom }} {{ ouvreur.prenom }}{% endblock %}
+
+{% block body %}
+
+{{parent()}}
+
+<div class="container">
+    <div class="row">
+       <div class="col mt-3 mb-3 d-flex">
+            <div class="card bg-light text-dark mx-auto custom-card-width">
+                    <div class="card-body"> 
+                        <h5 class="card-title text-center">{{ ouvreur.nom }}</h5>
+                        <p class="card-text text-center">{{ ouvreur.prenom }}</p>
+                        <p class="card-text text-center"><i class="fa-solid fa-phone"></i> {{ ouvreur.telephone }}</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="d-flex justify-content-center">
+
+           <a href="/theatre/editOuvreur/{{ ouvreur.id }}" class="text-white text-center d-block mx-2">
+                <i class="fas fa-square-pen fa-2x"></i>
+            </a>
+             <a href="{{ path('app_confirm_delete_ouvreur', {'id': ouvreur.id}) }}" class="text-white text-center d-block mx-2">
+                <i class="fas fa-trash fa-2x"></i>
+            </a>
+
+        </div>
+
+    </div>
+</div>
+
+ 
+
+
+
+
+{% endblock %}
